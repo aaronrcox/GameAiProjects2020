@@ -2,12 +2,12 @@
 
 #include "GameObject.h"
 
-class SeekBehaviour;
 class KeyboardBehaviour;
 
 class Player : public GameObject
 {
 public:
+
 	Player();
 	virtual ~Player();
 
@@ -16,8 +16,8 @@ public:
 
 protected:
 
-	KeyboardBehaviour* m_keyboardController = nullptr;
-	SeekBehaviour* m_seekBehaviour = nullptr;
+	KeyboardBehaviour* m_kbBehaviour;
+	// SeekBehaviour *m_seekBehaviour;
 
 private:
 };

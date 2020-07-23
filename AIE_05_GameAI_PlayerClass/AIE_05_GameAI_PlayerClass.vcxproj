@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{532014a6-af6c-4920-b79e-a52b5587663f}</ProjectGuid>
+    <ProjectGuid>{6B97D7E8-5EB5-4113-9B87-56C9A7BAFD24}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AIE_GameAI</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -171,12 +171,14 @@
     <ClCompile Include="src\GameObject.cpp" />
     <ClCompile Include="src\KeyboardBehaviour.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Application.h" />
     <ClInclude Include="inc\Behaviour.h" />
     <ClInclude Include="inc\GameObject.h" />
     <ClInclude Include="inc\KeyboardBehaviour.h" />
+    <ClInclude Include="inc\Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
