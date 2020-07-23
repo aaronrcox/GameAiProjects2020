@@ -1,8 +1,5 @@
 #pragma once
 
-// Forward Declare
-class GameObject;
-
 class Application
 {
 public:
@@ -25,9 +22,6 @@ private:
 	int m_windowWidth;
 	int m_windowHeight;
 	const char* m_windowTitle;
-
-	GameObject* m_player1 = nullptr;
-
 
 };
 

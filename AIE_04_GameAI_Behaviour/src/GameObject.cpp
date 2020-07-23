@@ -9,6 +9,7 @@ GameObject::GameObject()
 
 GameObject::~GameObject()
 {
+	delete m_behaviour;
 }
 
 void GameObject::Update(float deltaTime)

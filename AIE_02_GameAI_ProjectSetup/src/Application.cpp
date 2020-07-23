@@ -1,10 +1,6 @@
 #include "Application.h"
 #include "raylib.h"
 
-#include "GameObject.h"
-#include "Player.h"
-#include "KeyboardBehaviour.h"
-
 Application::Application(int windowWidth, int windowHeight, const char* windowTitle) :
 	m_windowWidth(windowWidth),
 	m_windowHeight(windowHeight),
@@ -38,27 +34,23 @@ void Application::Run()
 
 void Application::Load()
 {
-	m_player1 = new Player();
-	m_player1->SetPosition({ m_windowWidth * 0.25f, m_windowHeight / 2.0f });
-	
+
 }
 void Application::Unload()
 {
-	delete m_player1;
-	m_player1 = nullptr;
 
 }
 
 void Application::Update(float deltaTime)
 {
-	m_player1->Update(deltaTime);
+
 }
 void Application::Draw()
 {
 	BeginDrawing();
 	ClearBackground(RAYWHITE);
 
-	m_player1->Draw();
+	DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
 	EndDrawing();
 }

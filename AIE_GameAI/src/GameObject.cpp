@@ -9,6 +9,7 @@ GameObject::GameObject()
 
 GameObject::~GameObject()
 {
+
 }
 
 void GameObject::Update(float deltaTime)
@@ -83,6 +84,5 @@ void GameObject::SetFriction(const float& friction)
 
 void GameObject::SetBehaviour(Behaviour* behaviour)
 {
-	delete m_behaviour;
 	m_behaviour = behaviour;
 }

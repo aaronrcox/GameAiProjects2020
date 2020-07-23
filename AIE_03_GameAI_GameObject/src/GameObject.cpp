@@ -1,6 +1,5 @@
 
 #include "GameObject.h"
-#include "Behaviour.h"
 
 GameObject::GameObject()
 {
@@ -9,15 +8,11 @@ GameObject::GameObject()
 
 GameObject::~GameObject()
 {
+
 }
 
 void GameObject::Update(float deltaTime)
 {
-
-	if (m_behaviour != nullptr)
-		m_behaviour->Update(this, deltaTime);
-
-
 	// m_velocity += m_acceleration * deltaTime;
 	// m_position += m_velocity * deltaTime;
 	// AddForce( -m_velocity * m_friction); // apply friction
@@ -31,10 +26,6 @@ void GameObject::Update(float deltaTime)
 
 void GameObject::Draw()
 {
-
-	if (m_behaviour != nullptr)
-		m_behaviour->Draw(this);
-
 	Vector2 heading = Vector2Add(m_position, m_velocity);
 
 	DrawCircle(m_position.x, m_position.y, 8, GRAY);
@@ -62,11 +53,6 @@ const float& GameObject::GetFriction() const
 	return m_friction;
 }
 
-Behaviour* GameObject::GetBehaviour()
-{
-	return m_behaviour;
-}
-
 // Setters
 void GameObject::SetPosition(const Vector2& pos)
 {
@@ -79,10 +65,4 @@ void GameObject::SetVelocity(const Vector2& vel)
 void GameObject::SetFriction(const float& friction)
 {
 	m_friction = friction;
-}
-
-void GameObject::SetBehaviour(Behaviour* behaviour)
-{
-	delete m_behaviour;
-	m_behaviour = behaviour;
 }
