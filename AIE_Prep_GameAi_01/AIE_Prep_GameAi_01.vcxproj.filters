@@ -33,6 +33,12 @@
     <ClInclude Include="inc\SeekBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inc\Path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\FollowPathBehaviour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">
@@ -51,6 +57,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SeekBehaviour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FollowPathBehaviour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
