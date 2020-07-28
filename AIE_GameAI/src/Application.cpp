@@ -114,4 +114,16 @@ void Application::Draw()
 
 // TODO:
 // - Fix hard coded "60" value representing the radius of nearby nodes to connect
-// 
+// - add variables to customise the Graph2DEditor
+// - - node radius
+// - - node color
+// - - node outline
+// - - line color
+
+// - Prevent nodes from being placed on top of other nodes.
+
+// CHALLENGE
+// - Can you Save and Load the graph to file
+// - - Save to XML, JSON, Custom Binary format
+// - - TinyXML
+
