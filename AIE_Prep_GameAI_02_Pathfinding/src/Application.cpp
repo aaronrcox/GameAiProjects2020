@@ -34,7 +34,7 @@ void Application::Load()
 	
 
 	int numRows = 6;
-	int numCols = 13;
+	int numCols = 6;
 	float spacing = 50;
 	float xOffset = 100;
 	float yOffset = 100;
@@ -44,13 +44,32 @@ void Application::Load()
 	{
 		for (int x = 0; x < numCols; x++)
 		{
-			float rx = rand() % 16 - 8;
-			float ry = rand() % 16 - 8;
+			float rx = 0; // rand() % 16 - 8;
+			float ry = 0; // rand() % 16 - 8;
 
 			m_graph->AddNode({
 				x * spacing + xOffset + rx,
 				y * spacing + yOffset + ry
 			});
+		}
+	}
+
+	xOffset = 500;
+	numRows = 4;
+	numCols = 4;
+
+	// Create all the nodes
+	for (int y = 0; y < numRows; y++)
+	{
+		for (int x = 0; x < numCols; x++)
+		{
+			float rx = 0; // rand() % 16 - 8;
+			float ry = 0; // rand() % 16 - 8;
+
+			m_graph->AddNode({
+				x * spacing + xOffset + rx,
+				y * spacing + yOffset + ry
+				});
 		}
 	}
 

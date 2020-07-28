@@ -43,41 +43,15 @@ void Application::Load()
 {
 	m_graph = new Graph2D();
 
+	auto nodeA = m_graph->AddNode({ 100, 100 });
+	auto nodeB = m_graph->AddNode({ 200, 100 });
+	auto nodeC = m_graph->AddNode({ 200, 200 });
 
-	int numRows = 4;
-	int numCols = 6;
-	float xOffset = 100;
-	float yOffset = 100;
-	float spacing = 50;
+	m_graph->AddEdge(nodeA, nodeB, 100);
+	m_graph->AddEdge(nodeB, nodeA, 100);
 
-	for (int y = 0; y < numRows; y++)
-	{
-		for (int x = 0; x < numCols; x++)
-		{
-			m_graph->AddNode({
-				x * spacing + xOffset,
-				y * spacing + yOffset
-			});
-		}
-	}
-
-
-	for (auto node : m_graph->GetNodes())
-	{
-		std::vector<Graph2D::Node*> nearbyNodes;
-		m_graph->GetNearbyNodes(node->data, 60, nearbyNodes);
-
-		for (auto connectedNode : nearbyNodes)
-		{
-			if(connectedNode == node)
-				continue;
-
-			float dist = Vector2Distance(node->data, connectedNode->data);
-			m_graph->AddEdge(node, connectedNode, dist);
-			m_graph->AddEdge(connectedNode, node, dist);
-		}
-	}
-
+	m_graph->AddEdge(nodeB, nodeC, 100);
+	m_graph->AddEdge(nodeC, nodeB, 100);
 
 
 
@@ -108,10 +82,3 @@ void Application::Draw()
 
 	EndDrawing();
 }
-
-
-
-
-// TODO:
-// - Fix hard coded "60" value representing the radius of nearby nodes to connect
-// 
