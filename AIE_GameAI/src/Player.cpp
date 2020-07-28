@@ -6,9 +6,14 @@ Player::Player()
 {
 	m_kbBehaviour = new KeyboardBehaviour();
 	m_seekBehaviour = new SeekBehaviour();
+
+
+
+
+
 	m_seekBehaviour->SetTargetRadius(25.0f);
 	m_seekBehaviour->OnArrive([this](){
-			SetBehaviour(m_kbBehaviour);
+		SetBehaviour(m_kbBehaviour);
 	});
 
 	SetBehaviour(m_kbBehaviour);
@@ -24,7 +29,6 @@ Player::~Player()
 
 void Player::Update(float deltaTime)
 {
-
 	if (IsMouseButtonPressed(0))
 	{
 		m_seekBehaviour->SetTarget( GetMousePosition() );

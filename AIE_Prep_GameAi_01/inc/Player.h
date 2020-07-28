@@ -4,6 +4,8 @@
 
 class SeekBehaviour;
 class KeyboardBehaviour;
+class FollowPathBehaviour;
+class Path;
 
 class Player : public GameObject
 {
@@ -18,6 +20,9 @@ protected:
 
 	KeyboardBehaviour* m_keyboardController = nullptr;
 	SeekBehaviour* m_seekBehaviour = nullptr;
+	FollowPathBehaviour* m_followPath = nullptr;
+
+	Path* m_path;
 
 private:
 };
