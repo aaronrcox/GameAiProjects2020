@@ -77,7 +77,7 @@ void Application::Load()
 	for (auto node : m_graph->GetNodes())
 	{
 		std::vector<Graph2D::Node*> neibouringNodes;
-		m_graph->GetNearbyNodes(node->data, 70, neibouringNodes);
+		m_graph->GetNearbyNodes(node->data, 75, neibouringNodes);
 
 		for (auto connectedNode : neibouringNodes)
 		{

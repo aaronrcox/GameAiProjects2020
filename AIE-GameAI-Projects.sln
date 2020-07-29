@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AIE_09_GameAI_TemplatedGrap
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AIE_10_GameAI_GraphEditorClass", "AIE_10_GameAI_GraphEditorClass\AIE_10_GameAI_GraphEditorClass.vcxproj", "{AE4823CE-A139-452F-BC27-E8731E453437}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AIE_11_GameAI_GraphEditorClass", "AIE_11_GameAI_GraphEditorClass\AIE_11_GameAI_GraphEditorClass.vcxproj", "{7B07910C-30D6-430D-9D5B-5094DB3EF574}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -115,6 +117,14 @@ Global
 		{AE4823CE-A139-452F-BC27-E8731E453437}.Release|x64.Build.0 = Release|x64
 		{AE4823CE-A139-452F-BC27-E8731E453437}.Release|x86.ActiveCfg = Release|Win32
 		{AE4823CE-A139-452F-BC27-E8731E453437}.Release|x86.Build.0 = Release|Win32
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574}.Debug|x64.ActiveCfg = Debug|x64
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574}.Debug|x64.Build.0 = Debug|x64
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574}.Debug|x86.ActiveCfg = Debug|Win32
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574}.Debug|x86.Build.0 = Debug|Win32
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574}.Release|x64.ActiveCfg = Release|x64
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574}.Release|x64.Build.0 = Release|x64
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574}.Release|x86.ActiveCfg = Release|Win32
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +140,7 @@ Global
 		{B377A659-429E-44BB-8685-0625EFFADC1A} = {64AF7A3D-4EB2-47C5-A121-834D015D8370}
 		{A6858856-B24C-4869-BE3E-51E9D9B8E61E} = {C0DCB765-7B4F-44F4-A301-6F0099AA2644}
 		{AE4823CE-A139-452F-BC27-E8731E453437} = {C0DCB765-7B4F-44F4-A301-6F0099AA2644}
+		{7B07910C-30D6-430D-9D5B-5094DB3EF574} = {C0DCB765-7B4F-44F4-A301-6F0099AA2644}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {778395C1-215A-4121-B6EB-6A1810E8CA58}

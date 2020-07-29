@@ -122,8 +122,11 @@ void Application::Draw()
 
 // - Prevent nodes from being placed on top of other nodes.
 
-// CHALLENGE
+// optional CHALLENGE 1
 // - Can you Save and Load the graph to file
 // - - Save to XML, JSON, Custom Binary format
 // - - TinyXML
 
+// optional CHALLENGE 2
+// - load a load a png image, write a function to read the pixel coler at a given x/y coordinate
+// - add a condition when we create the grid of nodes, to only add a Node if the pixel is white...

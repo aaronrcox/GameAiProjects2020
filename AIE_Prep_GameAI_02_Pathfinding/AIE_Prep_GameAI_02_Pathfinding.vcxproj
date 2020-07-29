@@ -171,12 +171,14 @@
     <ClCompile Include="src\Graph2D.cpp" />
     <ClCompile Include="src\Graph2DRenderer.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\PathFinder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Application.h" />
     <ClInclude Include="inc\Graph.h" />
     <ClInclude Include="inc\Graph2D.h" />
     <ClInclude Include="inc\Graph2DRenderer.h" />
+    <ClInclude Include="inc\PathFinder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

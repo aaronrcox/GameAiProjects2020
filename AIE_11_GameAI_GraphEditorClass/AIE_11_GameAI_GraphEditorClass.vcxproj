@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{532014a6-af6c-4920-b79e-a52b5587663f}</ProjectGuid>
+    <ProjectGuid>{7B07910C-30D6-430D-9D5B-5094DB3EF574}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AIE_GameAI</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
