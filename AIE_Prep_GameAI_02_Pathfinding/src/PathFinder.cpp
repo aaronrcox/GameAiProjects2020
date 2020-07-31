@@ -74,7 +74,7 @@ void PathFinder::UpdateSearch()
 		}
 	}
 
-	m_open.sort([this](Node* a, Node* b) {
+	m_open.sort([](Node* a, Node* b) {
 		return a->gScore > b->gScore;
 	});
 }
