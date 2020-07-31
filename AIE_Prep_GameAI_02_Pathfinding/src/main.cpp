@@ -23,17 +23,19 @@ void TestGraph()
     auto g = graph.AddNode('G');
     auto h = graph.AddNode('H');
     auto i = graph.AddNode('I');
+    auto j = graph.AddNode('I');
 
-    graph.AddEdge(a, b, 0); graph.AddEdge(b, a, 0);     // AB
-    graph.AddEdge(a, i, 0); graph.AddEdge(i, a, 0);     // AS
-    graph.AddEdge(c, i, 0); graph.AddEdge(i, c, 0);     // SC
-    graph.AddEdge(g, i, 0); graph.AddEdge(i, g, 0);     // SG
-    graph.AddEdge(f, c, 0); graph.AddEdge(c, f, 0);     // FC
-    graph.AddEdge(f, g, 0); graph.AddEdge(g, f, 0);     // FG
-    graph.AddEdge(d, c, 0); graph.AddEdge(c, d, 0);     // CD
-    graph.AddEdge(c, e, 0); graph.AddEdge(e, c, 0);     // CE
-    graph.AddEdge(g, h, 0); graph.AddEdge(h, g, 0);     // GH
-    graph.AddEdge(e, h, 0); graph.AddEdge(h, e, 0);     // EH
+    graph.AddEdge(a, b, 0); graph.AddEdge(b, a, 0);     
+    graph.AddEdge(a, c, 0); graph.AddEdge(c, a, 0);     
+    graph.AddEdge(c, d, 0); graph.AddEdge(d, c, 0);     
+    graph.AddEdge(d, f, 0); graph.AddEdge(f, d, 0);     
+    graph.AddEdge(d, e, 0); graph.AddEdge(e, d, 0);     
+    graph.AddEdge(e, g, 0); graph.AddEdge(g, e, 0);     
+    graph.AddEdge(f, g, 0); graph.AddEdge(g, f, 0);     
+    graph.AddEdge(f, h, 0); graph.AddEdge(h, f, 0);     
+    graph.AddEdge(e, i, 0); graph.AddEdge(i, e, 0);     
+    graph.AddEdge(i, h, 0); graph.AddEdge(h, i, 0);     
+    graph.AddEdge(e, j, 0); graph.AddEdge(j, e, 0);
 
     graph.ForEachBFS(f, [](Graph<char,int>::Node* node) {
         std::cout << node->data << std::endl;

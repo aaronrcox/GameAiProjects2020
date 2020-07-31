@@ -31,7 +31,7 @@ public:
 	void GetNearbyNodes(Vector2 pos, float radius, std::vector<Node*>& out_nodes);
 
 	// Dijkstra
-	bool FindPath(Node *startNode, std::function<bool(Node *)>isGoalNode, std::list<Node *> out_path);
+	// bool FindPath(Node *startNode, std::function<bool(Node *)>isGoalNode, std::list<Node *> out_path);
 	
 
 protected:

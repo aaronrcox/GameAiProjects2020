@@ -23,7 +23,7 @@ void Graph2D::GetNearbyNodes(Vector2 pos, float radius, std::vector<Node*>& out_
 	}
 }
 
-
+/*
 bool Graph2D::FindPath(Node* startNode, std::function<bool(Node*)>isGoalNode, std::list<Node*> out_path)
 {
 	if (m_nodes.empty())
@@ -75,7 +75,7 @@ bool Graph2D::FindPath(Node* startNode, std::function<bool(Node*)>isGoalNode, st
 			// is it already in the stack?
 			auto childPfNodeIter = nodes.find(connection.to);
 			if (childPfNodeIter == nodes.end())
-			{
+			{ 
 				PathFindNode* childPfNode = new PathFindNode();
 				childPfNode->graphNode = connection.to;
 				childPfNode->parent = pfNode;
@@ -104,3 +104,5 @@ bool Graph2D::FindPath(Node* startNode, std::function<bool(Node*)>isGoalNode, st
 	// stack is empty... no path found
 	return false;
 }
+
+*/
