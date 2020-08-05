@@ -21,7 +21,16 @@ public:
 	struct Edge
 	{
 		Node* to;
-		TEdgeData data;
+		TEdgeData data; // COST
+	};
+
+	struct PFNode
+	{
+		Node* gNode;
+		PFNode* parent = nullptr;
+		float gScore; // parents gScore + cost to trave from parent to this node.
+		// float hScore; // huristic estimate to goalNode (AStar)
+		// float fScore; // gScore + hScore
 	};
 
 public:
@@ -162,6 +171,114 @@ public:
 			}
 		}
 	}
+
+	// =======================================================================
+	// Find Path
+	// =======================================================================
+	bool FindPath(Node* startNode, std::function<bool(Node* n)> isGoalNode, std::list<Node*>& out_path)
+	{
+
+		
+
+		if (m_nodes.empty())
+			return nullptr;
+
+		std::vector<PFNode* > visited;
+		std::list<PFNode* > stack;
+
+		auto GetNodeInLists = [&](Node *nodeToFind) -> PFNode* {
+			for (auto& n : stack)
+				if (n->gNode == nodeToFind)
+					return n;
+
+			for (auto& n : visited)
+				if (n->gNode == nodeToFind)
+					return n;
+
+			return nullptr;
+		};
+
+
+		// 
+		PFNode* pfNode = new PFNode();
+		pfNode->gNode = startNode;
+		pfNode->parent = nullptr;
+		pfNode->gScore = 0;
+
+		stack.push_back(pfNode);
+
+		while (stack.empty() == false)
+		{
+			// get node at end of stack, and then remove the node from the stack.
+			PFNode* node = stack.back();
+			stack.pop_back();
+
+			// add the node to the visited
+			visited.push_back(node);
+
+			// if the isGoalNode returns true, we can stop the search
+			if (isGoalNode(node->gNode)) {
+				// Calculate the path
+				auto current = node;
+				while (current != nullptr)
+				{
+					out_path.push_front(current->gNode);
+					current = current->parent;
+				}
+				return true;
+			}
+
+			// add children to the stack if they have not been visited
+			for (Edge& connection : node->gNode->connections)
+			{
+
+				float gScore = node->gScore + connection.data; 
+
+				// does the node exist in the visited list? or,
+				// is it already in the stack?
+				auto childPfNode = GetNodeInLists(connection.to);
+				if (childPfNode == nullptr)
+				{
+					childPfNode = new PFNode();
+					childPfNode->parent = node;
+					childPfNode->gNode = connection.to;
+					childPfNode->gScore = gScore;
+					stack.push_back(childPfNode);
+				}
+				else
+				{
+					// lower scores are better
+					if (gScore < childPfNode->gScore )
+					{
+						childPfNode->gScore = gScore;
+						childPfNode->parent = node;
+					}
+				}
+			}
+
+			stack.sort([](PFNode* a, PFNode* b) {
+				return a->gScore > b->gScore;
+			});
+
+		}
+
+		return false;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 protected:
 
 	std::vector<Node*> m_nodes;

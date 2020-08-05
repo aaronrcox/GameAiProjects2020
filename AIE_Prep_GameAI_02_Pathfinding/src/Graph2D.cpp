@@ -82,7 +82,7 @@ bool Graph2D::FindPath(Node* startNode, std::function<bool(Node*)>isGoalNode, st
 				childPfNode->gScore = gScore;
 
 				inStack[childPfNode] = true;
-				nodes[startNode] = childPfNode;
+				nodes[connection.to] = childPfNode;
 				stack.push_back(pfNode);
 			}
 			else
